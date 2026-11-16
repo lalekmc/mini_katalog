@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "name": "Nova Buds Pro",
+    "tagline": "Aktif gürültü engelleme",
+    "category": "Ses",
+    "price": 2499.9,
+    "image": "assets/images/products/buds.png",
+    "description": "Kablosuz kulak içi kulaklık. Aktif gürültü engelleme ve şeffaf mod ile her ortamda net ses sunar.",
+    "specs": {
+      "Pil": "30 saat",
+      "Bağlantı": "Bluetooth 5.3",
+      "Suya dayanıklılık": "IPX4"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Nova Watch S",
+    "tagline": "Sağlık ve spor takibi",
+    "category": "Telefon & Saat",
+    "price": 4299.0,
+    "image": "assets/images/products/watch.png",
+    "description": "AMOLED ekranlı akıllı saat. Nabız, uyku ve adım takibi yapar, bildirimleri bileğinize getirir.",
+    "specs": {
+      "Ekran": "1.43\" AMOLED",
+      "Pil": "10 gün",
+      "Sensör": "Nabız, SpO2"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Nova Phone 12",
+    "tagline": "6.5\" ekran, 128 GB",
+    "category": "Telefon & Saat",
+    "price": 18999.0,
+    "image": "assets/images/products/phone.png",
+    "description": "Günlük kullanım için hızlı ve şık akıllı telefon. Çift kamera ve gün boyu pil ömrü.",
+    "specs": {
+      "Ekran": "6.5\" OLED",
+      "Depolama": "128 GB",
+      "Kamera": "50 MP + 12 MP"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Nova Book Air",
+    "tagline": "İnce ve hafif dizüstü",
+    "category": "Bilgisayar",
+    "price": 32499.0,
+    "image": "assets/images/products/laptop.png",
+    "description": "1.2 kg ağırlığında, sessiz çalışan ince dizüstü bilgisayar. Ders ve ofis işleri için ideal.",
+    "specs": {
+      "İşlemci": "8 çekirdek",
+      "RAM": "16 GB",
+      "Depolama": "512 GB SSD"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Nova Snap M",
+    "tagline": "Aynasız fotoğraf makinesi",
+    "category": "Aksesuar",
+    "price": 21750.0,
+    "image": "assets/images/products/camera.png",
+    "description": "Değiştirilebilir lensli aynasız fotoğraf makinesi. 4K video ve hızlı otomatik odak.",
+    "specs": {
+      "Sensör": "24 MP APS-C",
+      "Video": "4K 30fps",
+      "Ağırlık": "390 g"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Nova Pad Kontrolcü",
+    "tagline": "Kablosuz oyun kolu",
+    "category": "Oyun",
+    "price": 1899.0,
+    "image": "assets/images/products/gamepad.png",
+    "description": "Telefon, tablet ve bilgisayarla uyumlu kablosuz oyun kolu. Titreşim desteği vardır.",
+    "specs": {
+      "Bağlantı": "Bluetooth",
+      "Pil": "20 saat",
+      "Uyumluluk": "Android, iOS, PC"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Nova Keys",
+    "tagline": "Mekanik klavye",
+    "category": "Bilgisayar",
+    "price": 2299.5,
+    "image": "assets/images/products/keyboard.png",
+    "description": "RGB aydınlatmalı, kompakt mekanik klavye. Sessiz ve dayanıklı tuşlar.",
+    "specs": {
+      "Düzen": "Türkçe Q",
+      "Bağlantı": "USB-C / Bluetooth",
+      "Aydınlatma": "RGB"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Nova Mouse",
+    "tagline": "Ergonomik kablosuz mouse",
+    "category": "Bilgisayar",
+    "price": 749.9,
+    "image": "assets/images/products/mouse.png",
+    "description": "Elinize tam oturan ergonomik tasarım. Şarj edilebilir pil ve sessiz tıklama.",
+    "specs": {
+      "DPI": "4000",
+      "Pil": "70 gün",
+      "Bağlantı": "2.4 GHz"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Nova Sound Mini",
+    "tagline": "Taşınabilir hoparlör",
+    "category": "Ses",
+    "price": 1349.0,
+    "image": "assets/images/products/speaker.png",
+    "description": "Küçük boyutuna rağmen güçlü ses veren taşınabilir Bluetooth hoparlör.",
+    "specs": {
+      "Güç": "10 W",
+      "Pil": "12 saat",
+      "Suya dayanıklılık": "IP67"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Nova Power 20K",
+    "tagline": "Hızlı şarj powerbank",
+    "category": "Aksesuar",
+    "price": 999.0,
+    "image": "assets/images/products/powerbank.png",
+    "description": "20.000 mAh kapasiteli, iki cihazı aynı anda hızlı şarj edebilen powerbank.",
+    "specs": {
+      "Kapasite": "20.000 mAh",
+      "Çıkış": "USB-C 22.5 W",
+      "Giriş": "USB-C"
+    }
+  }
+]
