@@ -19,9 +19,9 @@ Flutter ile geliştirilmiş, basit fakat profesyonel görünümlü bir **ürün 
 
 ## Ekran Görüntüleri
 
-| Ana Sayfa | Ürün Detayı | Sepet | Boş Sepet |
+| Ana Sayfa | Ürün Detayı | Sepet | Sipariş Onayı |
 |---|---|---|---|
-| ![Ana Sayfa](screenshots/1_ana_sayfa.png) | ![Ürün Detayı](screenshots/2_urun_detay.png) | ![Sepet](screenshots/3_sepet.png) | ![Boş Sepet](screenshots/4_bos_sepet.png) |
+| ![Ana Sayfa](screenshots/1_ana_sayfa.png) | ![Ürün Detayı](screenshots/2_urun_detay.png) | ![Sepet](screenshots/3_sepet.png) | ![Sipariş Onayı](screenshots/4_siparis_onay.png) |
 
 ## Çalıştırma Adımları
 
@@ -32,7 +32,7 @@ Flutter ile geliştirilmiş, basit fakat profesyonel görünümlü bir **ürün 
    ```
 2. Projeyi klonlayın:
    ```bash
-   git clone https://github.com/KULLANICI_ADI/mini_katalog.git
+   git clone https://github.com/lalekmc/mini_katalog.git
    cd mini_katalog
    ```
 3. Bağımlılıkları yükleyin:
