@@ -35,9 +35,11 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Product> _filter(List<Product> products) {
     final query = _query.trim().toLowerCase();
     return products.where((p) {
-      final matchesCategory = _selectedCategory == _allCategories ||
+      final matchesCategory =
+          _selectedCategory == _allCategories ||
           p.category == _selectedCategory;
-      final matchesQuery = query.isEmpty ||
+      final matchesQuery =
+          query.isEmpty ||
           p.name.toLowerCase().contains(query) ||
           p.category.toLowerCase().contains(query);
       return matchesCategory && matchesQuery;
@@ -86,37 +88,43 @@ class _HomeScreenState extends State<HomeScreen> {
             ...{for (final p in products) p.category},
           ];
           final visible = _filter(products);
-          return CustomScrollView(
-            slivers: [
-              SliverToBoxAdapter(child: _buildHeader(categories)),
-              if (visible.isEmpty)
-                const SliverFillRemaining(
-                  hasScrollBody: false,
-                  child:
-                      Center(child: Text('Aramanıza uygun ürün bulunamadı.')),
-                )
-              else
-                SliverPadding(
-                  padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),
-                  sliver: SliverGrid.builder(
-                    itemCount: visible.length,
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      mainAxisSpacing: 12,
-                      crossAxisSpacing: 12,
-                      childAspectRatio: 0.66,
+          return Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 720),
+              child: CustomScrollView(
+                slivers: [
+                  SliverToBoxAdapter(child: _buildHeader(categories)),
+                  if (visible.isEmpty)
+                    const SliverFillRemaining(
+                      hasScrollBody: false,
+                      child: Center(
+                        child: Text('Aramanıza uygun ürün bulunamadı.'),
+                      ),
+                    )
+                  else
+                    SliverPadding(
+                      padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),
+                      sliver: SliverGrid.builder(
+                        itemCount: visible.length,
+                        gridDelegate:
+                            const SliverGridDelegateWithMaxCrossAxisExtent(
+                              maxCrossAxisExtent: 220,
+                              mainAxisSpacing: 12,
+                              crossAxisSpacing: 12,
+                              childAspectRatio: 0.66,
+                            ),
+                        itemBuilder: (context, index) {
+                          final product = visible[index];
+                          return ProductCard(
+                            product: product,
+                            onTap: () => _openDetail(product),
+                          );
+                        },
+                      ),
                     ),
-                    itemBuilder: (context, index) {
-                      final product = visible[index];
-                      return ProductCard(
-                        product: product,
-                        onTap: () => _openDetail(product),
-                      );
-                    },
-                  ),
-                ),
-            ],
+                ],
+              ),
+            ),
           );
         },
       ),

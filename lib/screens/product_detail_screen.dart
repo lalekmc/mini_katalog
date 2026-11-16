@@ -36,6 +36,11 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
     if (mounted) setState(() {});
   }
 
+  double _sidePadding(BuildContext context) {
+    final width = MediaQuery.sizeOf(context).width;
+    return width > 600 ? (width - 600) / 2 : 0;
+  }
+
   @override
   Widget build(BuildContext context) {
     final product = ModalRoute.of(context)!.settings.arguments as Product;
@@ -51,7 +56,12 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
         ],
       ),
       body: ListView(
-        padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+        padding: EdgeInsets.fromLTRB(
+          16 + _sidePadding(context),
+          8,
+          16 + _sidePadding(context),
+          24,
+        ),
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(20),
@@ -66,14 +76,16 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
           const SizedBox(height: 20),
           Text(
             product.name,
-            style: theme.textTheme.headlineSmall
-                ?.copyWith(fontWeight: FontWeight.bold),
+            style: theme.textTheme.headlineSmall?.copyWith(
+              fontWeight: FontWeight.bold,
+            ),
           ),
           const SizedBox(height: 4),
           Text(
             product.tagline,
-            style: theme.textTheme.bodyMedium
-                ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+            style: theme.textTheme.bodyMedium?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
           ),
           const SizedBox(height: 20),
           Text('Açıklama', style: theme.textTheme.titleMedium),
@@ -129,8 +141,10 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                 icon: const Icon(Icons.add_shopping_cart),
                 label: Text(inCart > 0 ? 'Sepette ($inCart)' : 'Sepete Ekle'),
                 style: FilledButton.styleFrom(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 14,
+                  ),
                 ),
               ),
             ],

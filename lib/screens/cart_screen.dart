@@ -15,6 +15,11 @@ class CartScreen extends StatefulWidget {
 }
 
 class _CartScreenState extends State<CartScreen> {
+  double _sidePadding(BuildContext context) {
+    final width = MediaQuery.sizeOf(context).width;
+    return width > 600 ? (width - 600) / 2 : 0;
+  }
+
   Future<void> _checkout() async {
     final total = widget.cart.totalPrice;
     setState(() => widget.cart.clear());
@@ -60,14 +65,18 @@ class _CartScreenState extends State<CartScreen> {
                   const SizedBox(height: 4),
                   Text(
                     'Ürünleri keşfetmeye başlayın.',
-                    style: theme.textTheme.bodyMedium
-                        ?.copyWith(color: theme.colorScheme.onSurfaceVariant),
+                    style: theme.textTheme.bodyMedium?.copyWith(
+                      color: theme.colorScheme.onSurfaceVariant,
+                    ),
                   ),
                 ],
               ),
             )
           : ListView.separated(
-              padding: const EdgeInsets.all(16),
+              padding: EdgeInsets.symmetric(
+                vertical: 16,
+                horizontal: 16 + _sidePadding(context),
+              ),
               itemCount: cart.items.length,
               separatorBuilder: (context, index) => const SizedBox(height: 8),
               itemBuilder: (context, index) {
@@ -134,7 +143,12 @@ class _CartScreenState extends State<CartScreen> {
           ? null
           : SafeArea(
               child: Padding(
-                padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
+                padding: EdgeInsets.fromLTRB(
+                  16 + _sidePadding(context),
+                  8,
+                  16 + _sidePadding(context),
+                  12,
+                ),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -147,8 +161,9 @@ class _CartScreenState extends State<CartScreen> {
                         ),
                         Text(
                           formatPrice(cart.totalPrice),
-                          style: theme.textTheme.titleLarge
-                              ?.copyWith(fontWeight: FontWeight.bold),
+                          style: theme.textTheme.titleLarge?.copyWith(
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ],
                     ),
